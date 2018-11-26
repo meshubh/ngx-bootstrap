@@ -10,6 +10,14 @@ export abstract class BaseComponent {
     cy.visit(this.pageUrl);
   }
 
+  scrollToMenu(subMenu: string) {
+    cy.get('examples h3').contains(subMenu).scrollIntoView();
+  }
+
+  clickOnDemoMenu(subMenu: string) {
+    cy.get('add-nav').contains('a', subMenu).click();
+  }
+
   clickByText(parent: string, text: string) {
     cy.get(parent).contains(text).click();
   }
