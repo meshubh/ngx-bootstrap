@@ -13,4 +13,8 @@ export abstract class BaseComponent {
   clickByText(parent: string, text: string) {
     cy.get(parent).contains(text).click();
   }
+
+  dblClickByText(parent: string, text: string) {
+    cy.get(parent).contains(text).dblclick();
+  }
 }

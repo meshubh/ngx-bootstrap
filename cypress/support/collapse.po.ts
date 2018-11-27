@@ -7,8 +7,13 @@ export class CollapsePo extends BaseComponent {
 
   collapseClass = '.collapse';
   showIndicator = 'in show';
+  infoClass = '.col-md-9';
 
   exampleDemosArr = {
-    basic: 'collapse-demo'
+    basic: 'collapse-demo',
+    events: 'collapse-demo-events',
+    manualToggle: 'toggle-manual-demo',
+    inlineDisplay: 'inline-display-demo',
+    accessibility: 'demo-accessibility'
   };
 }
