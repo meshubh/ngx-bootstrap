@@ -104,6 +104,7 @@ export class BsModalService {
   _showModal(content: any): BsModalRef {
     const modalLoader = this.loaders[this.loaders.length - 1];
     const bsModalRef = new BsModalRef();
+    modalLoader._bsModalRef = bsModalRef;
     const modalContainerRef = modalLoader
       .provide({ provide: ModalOptions, useValue: this.config })
       .provide({ provide: BsModalRef, useValue: bsModalRef })
@@ -203,8 +204,8 @@ export class BsModalService {
   }
 
   private copyEvent(from: EventEmitter<any>, to: EventEmitter<any>) {
-    from.subscribe(() => {
-      to.emit(this.lastDismissReason);
+    from.subscribe((_bsModalRef: any) => {
+      to.emit(_bsModalRef || this.lastDismissReason);
     });
   }
 }

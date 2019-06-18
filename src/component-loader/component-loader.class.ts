@@ -33,6 +33,7 @@ export class ComponentLoader<T> {
   instance: T;
   _componentRef: ComponentRef<T>;
   _inlineViewRef: EmbeddedViewRef<T>;
+  _bsModalRef: any;
 
   private _providers: Provider[] = [];
   private _componentFactory: ComponentFactory<T>;
@@ -174,7 +175,7 @@ export class ComponentLoader<T> {
       }
       this._componentRef.changeDetectorRef.markForCheck();
       this._componentRef.changeDetectorRef.detectChanges();
-      this.onShown.emit(this._componentRef.instance);
+      this.onShown.emit(this._bsModalRef || this._componentRef.instance);
     }
 
     this._registerOutsideClick();
@@ -213,7 +214,7 @@ export class ComponentLoader<T> {
     this._componentRef = null;
     this._removeGlobalListener();
 
-    this.onHidden.emit();
+    this.onHidden.emit(this._bsModalRef);
 
     return this;
   }
