@@ -1,8 +1,7 @@
 {
-  "name": "ngx-bootstrap-base",
-  "version": "3.0.1",
+  "name": "wm-ngx-bootstrap",
+  "version": "1.0.0",
   "description": "Native Angular Bootstrap Components",
-  "private": true,
   "scripts": {
     "lite-server": "lite-server -c scripts/bs-config.js",
     "demo.gen-docs": "node scripts/docs/get-doc.js",
@@ -151,5 +150,8 @@
     "wallaby-webpack": "3.9.7",
     "webpack-bundle-analyzer": "2.11.3",
     "zone.js": "0.8.26"
+  },
+  "directories": {
+    "doc": "docs"
   }
 }
