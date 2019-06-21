@@ -2,7 +2,6 @@
   "name": "ngx-bootstrap-base",
   "version": "3.0.1",
   "description": "Native Angular Bootstrap Components",
-  "private": true,
   "scripts": {
     "lite-server": "lite-server -c scripts/bs-config.js",
     "demo.gen-docs": "node scripts/docs/get-doc.js",
@@ -56,11 +55,11 @@
     "angular2",
     "twitter-bootstrap"
   ],
-  "author": "Dmitriy Shekhovtsov <valorkin@gmail.com>",
+  "author": "Shubham Agarwal <shubhamagarwal9625@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/valor-software/ngx-bootstrap.git"
+    "url": "git+ssh://git@github.com/meshubh/ngx-bootstrap.git"
   },
   "bugs": {
     "url": "https://github.com/valor-software/ngx-bootstrap/issues"
