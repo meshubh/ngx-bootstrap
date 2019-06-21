@@ -1,6 +1,6 @@
 {
-  "name": "ngx-bootstrap-base",
-  "version": "3.0.1",
+  "name": "ngx-bootstrap-sample",
+  "version": "1.0.0",
   "description": "Native Angular Bootstrap Components",
   "scripts": {
     "lite-server": "lite-server -c scripts/bs-config.js",
@@ -11,7 +11,7 @@
     "demo.set-version": "run-s demo.fetch demo.archive",
     "demo.deploy-gh-pages": "gh-pages -d gh-pages",
     "demo.build": "run-s build link demo.gen-docs demo.ng-build demo.set-version",
-    "demo.serve": "run-s demo.build lite-server",
+    "demo.serve": "run-s demof.build lite-server",
     "demo.serve-universal": "run-s build:dynamic serve:dynamic",
     "demo.deploy": "run-s demo.build demo.deploy-gh-pages",
     "link": "ngm link -p src --here",
@@ -64,6 +64,7 @@
   "bugs": {
     "url": "https://github.com/valor-software/ngx-bootstrap/issues"
   },
+  "es2015": "bundles/ngx-bootstrap.es2015.js",
   "homepage": "https://github.com/valor-software/ngx-bootstrap#readme",
   "peerDependencies": {
     "@angular/common": ">=6.0.0",
@@ -150,5 +151,8 @@
     "wallaby-webpack": "3.9.7",
     "webpack-bundle-analyzer": "2.11.3",
     "zone.js": "0.8.26"
+  },
+  "directories": {
+    "doc": "docs"
   }
 }
